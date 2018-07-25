@@ -3,8 +3,7 @@
 
     <item android:id="@+id/login"
         android:title="Account"
-       android:contentDescription="@string/Open"
-        android:textColor="@android:color/white"/>
+       android:contentDescription="@string/Open"/>
 
     <item android:id="@+id/BSprices"
         android:title="Buffet Style Prices"

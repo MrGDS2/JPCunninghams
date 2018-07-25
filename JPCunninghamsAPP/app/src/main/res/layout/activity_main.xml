@@ -32,33 +32,33 @@
 
 
         <!-- Sign Up btnn -->
-            <info.hoang8f.widget.FButton
+            <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnSignUp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Signup"
             android:layout_margin="8dp"
-            app:buttonColor="@color/btnColor"
-
+           android:background="@color/btnColor"
             android:textColor="@android:color/white"
-            app:cornerRadius="4dp"
-            app:shadowColor="@android:color/black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"
+                app:cornerRadius="4dp"
+                app:shadowColor="@android:color/black"
+                app:shadowEnabled="true"
+                app:shadowHeight="5dp"
             />
 
         <!-- Login btnn -->
 
-        <info.hoang8f.widget.FButton
+      <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Login"
             android:layout_margin="8dp"
-            app:buttonColor="@color/btnActive"
+            android:background="@color/btnActive"
             android:textColor="@android:color/white"
+            android:clickable="true"
             app:cornerRadius="4dp"
             app:shadowColor="@android:color/black"
             app:shadowEnabled="true"
