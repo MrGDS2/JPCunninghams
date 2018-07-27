@@ -4,8 +4,12 @@
     <string name="Close">Close</string>
     <string name="Signup">Sign Up</string>
     <string name="Login">Login</string>
-    <string name="success">Login successful!</string>
+    <string name="SignUp">Create Account</string>
+    <string name="SignUpsuccess">Account created successfully!</string>
+    <string name="SignUpError">Account creation failure</string>
+    <string name="logsuccess">Login successful!</string>
     <string name="logError">Login Failure</string>
-    <string name="nonExistUsr">No account of this name exist</string>
+    <string name="nonExistUsr">No account with this number exist</string>
+    <string name="ExistUsr">Account of this number exist</string>
 
 </resources>
