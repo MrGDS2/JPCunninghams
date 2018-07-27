@@ -1,0 +1,99 @@
+   user_table.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        //check usr existance in db
+
+
+
+                            if (dataSnapshot.child(ePhone.getText().toString()).exists()) {
+                                //get user information
+                                mdialog.dismiss();
+                                User usr = dataSnapshot.child(ePhone.getText().toString()).getValue(User.class);
+                                /*if usr password on db == to usr typed in password */
+                                if (usr.getPassword().equals(ePassword.getText().toString())) {
+                                    Toast.makeText(Login.this, R.string.success, Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Login.this, R.string.logError, Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
+
+                        else
+                        {
+                            //error non existing usr
+                            Toast.makeText(Login.this,R.string.nonExistUsr, Toast.LENGTH_SHORT).show();
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
+
+
+
+
+ /* if(saveMemory)
+                {
+
+                    SharedPreferences savepref=getPreferences(Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=savepref.edit();
+                    editor.putString("username",Username);
+                    editor.putString("password",Password);
+                    editor.putBoolean("save", true);                          //stores username and password on device when checked
+                    editor.commit();
+
+                }*/
+
+
+
+
+
+
+
+
+
+
+                Phone = ePhone.getText().toString();
+                Password= ePassword.getText().toString();
+                System.out.println("USERNAME " + ePhone + "Password " + ePassword);
+
+               /* if(saveMemory)
+                {
+
+                    SharedPreferences savepref=getPreferences(Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=savepref.edit();
+                    editor.putString("username",Username);
+                    editor.putString("password",Password);
+                    editor.putBoolean("save", true);                          //stores username and password on device when checked
+                    editor.commit();
+
+                }*/
+                onLogin(Phone, Password);
+
+
+                if (mAuth== null) {      //login failed
+                    Log.i("Auth doesn't=Null", "----->=D");
+                   // Animation myAnim = AnimationUtils.loadAnimation(LoginN2F.this, R.anim.shake);
+
+                    //v.startAnimation(myAnim);
+                }
+
+
+
+
+
+
+
+
+            }
+        });
+
+

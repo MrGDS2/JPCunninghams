@@ -4,4 +4,8 @@
     <string name="Close">Close</string>
     <string name="Signup">Sign Up</string>
     <string name="Login">Login</string>
+    <string name="success">Login successful!</string>
+    <string name="logError">Login Failure</string>
+    <string name="nonExistUsr">No account of this name exist</string>
+
 </resources>

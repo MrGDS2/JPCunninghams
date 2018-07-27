@@ -1,5 +1,6 @@
 package build.cunninghams.jp.jpcunninghamsapp;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,10 @@ mSignup.setOnClickListener(new View.OnClickListener() {
    mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Login Clicked", Toast.LENGTH_LONG).show();
+               // Toast.makeText(MainActivity.this, "Login Clicked", Toast.LENGTH_LONG).show();
+                Intent i= new Intent(MainActivity.this,Login.class);
+                startActivity(i);
+
             }
         });
 
