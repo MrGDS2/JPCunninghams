@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import build.cunninghams.jp.jpcunninghamsapp.Model.User;
 import build.cunninghams.jp.jpcunninghamsapp.R;
 
 public class SignUp extends AppCompatActivity {

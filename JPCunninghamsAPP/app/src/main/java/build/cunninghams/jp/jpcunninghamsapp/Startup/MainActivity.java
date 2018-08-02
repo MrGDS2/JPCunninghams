@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
+       /** mDrawerLayout= (DrawerLayout) findViewById(R.id.drawerlayout);
 
         mtoggle= new ActionBarDrawerToggle(this,mDrawerLayout,R.string.Open,R.string.Close);
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mtoggle.syncState();
 
        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //back nav
-
+**/
         //Sign up
         mSignup= (AppCompatButton) findViewById(R.id.btnSignUp);
 

@@ -2,6 +2,7 @@ package build.cunninghams.jp.jpcunninghamsapp.UserDB;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import build.cunninghams.jp.jpcunninghamsapp.CurrentUsr.Currentusr;
+import build.cunninghams.jp.jpcunninghamsapp.Model.User;
 import build.cunninghams.jp.jpcunninghamsapp.R;
+import build.cunninghams.jp.jpcunninghamsapp.Startup.Home_Nav;
 
 
 public class Login extends AppCompatActivity {
@@ -103,7 +107,12 @@ public class Login extends AppCompatActivity {
                             User usr = dataSnapshot.child(etPhone.getText().toString()).getValue(User.class);
                             /*if usr password on db == to usr typed in password */
                            if (usr.getPassword().equals(etPassword.getText().toString())) {
-                               Toast.makeText(Login.this, R.string.logsuccess, Toast.LENGTH_SHORT).show();
+                               //Toast.makeText(Login.this, R.string.logsuccess, Toast.LENGTH_SHORT).show();
+                               Intent i = new Intent(Login.this, Home_Nav.class);
+
+                               Currentusr.currentUser=usr;//saves current user
+                               startActivity(i);//after login go to home page
+                               Login.this.finish();
 
                                Phone = etPhone.getText().toString();
                                Password=etPassword.getText().toString();
@@ -119,7 +128,7 @@ public class Login extends AppCompatActivity {
                                }
                            } else {
                                Toast.makeText(Login.this, R.string.logError, Toast.LENGTH_SHORT).show();
-
+                                mdialog.dismiss();
                             }
                             Toast.makeText(Login.this, usr.getPassword(), Toast.LENGTH_SHORT).show();
                             Log.d("USR",usr.getPassword());
@@ -131,7 +140,7 @@ public class Login extends AppCompatActivity {
                         {
                             //error non existing usr
                             Toast.makeText(Login.this,R.string.nonExistUsr, Toast.LENGTH_SHORT).show();
-
+                            mdialog.dismiss();
                         }
 
                     }

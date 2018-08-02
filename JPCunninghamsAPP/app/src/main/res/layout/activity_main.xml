@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -41,10 +41,7 @@
             android:layout_margin="8dp"
            android:background="@color/btnColor"
             android:textColor="@android:color/white"
-                app:cornerRadius="4dp"
-                app:shadowColor="@android:color/black"
-                app:shadowEnabled="true"
-                app:shadowHeight="5dp"
+
             />
 
         <!-- Login btnn -->
@@ -59,20 +56,17 @@
             android:background="@color/btnActive"
             android:textColor="@android:color/white"
             android:clickable="true"
-            app:cornerRadius="4dp"
-            app:shadowColor="@android:color/black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"
+
             />
 
     </LinearLayout>
-    <android.support.design.widget.NavigationView
+  <!-- <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/colorPrimary"
         app:menu="@menu/side_menu"
          />
+-->
 
-
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

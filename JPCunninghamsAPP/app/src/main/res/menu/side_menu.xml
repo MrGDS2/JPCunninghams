@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/login"
+    <item android:id="@+id/account"
         android:title="Account"
-       android:contentDescription="@string/Open"/>
+       android:contentDescription="@string/Open"
+        android:icon="@drawable/ic_account_circle_black_5dp"
+        />
 
-    <item android:id="@+id/BSprices"
+    <item android:id="@+id/buff_prices"
         android:title="Buffet Style Prices"
-        android:textColor="@android:color/white"/>
+        android:icon="@drawable/ic_monetization_on_black_5dp"
+        />
 
-    <item android:id="@+id/Drinks"
-    android:title="Drinks Menu"
-        android:textColor="@android:color/white"  />
+    <item android:id="@+id/drinksmenu"
+        android:title="Drinks Menu"
+        android:icon="@drawable/ic_local_drink_black_5dp"
 
-    <item android:id="@+id/FoodMenu"
-    android:title="Food Menu"
-        android:textColor="@android:color/white"/>
-
+        />
 
     <item android:id="@+id/hours"
         android:title="Hours"
-        android:textColor="@android:color/white"/>
-    <item android:id="@+id/Location"
+        android:icon="@drawable/ic_access_time_black_5dp"
+        />
+
+    <item android:id="@+id/location"
         android:title="Map"
-        android:textColor="@android:color/white"/>
+        android:icon="@drawable/ic_map_black_5dp"
+       />
 
 
 
